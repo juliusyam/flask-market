@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  Register
+{% endblock %}
+
+{% block content %}
+  <div class="container" style="display:grid; place-items: center; text-align: center;">
+    <form method="POST" action="" class="form-register" style="color:white">
+      {{ form.hidden_tag() }}
+
+      <br>
+      <img style="border-radius: 50%" src="https://picsum.photos/id/101/100/100" alt="Pic">
+      <h1 class="h3 mb-3 font-weight-normal">Please create your account</h1>
+
+      {{ form.username.label() }}
+      {{ form.username(class="form-control", placeholder="Username") }}
+
+      <br>
+
+      {{ form.email_address.label() }}
+      {{ form.email_address(class="form-control", placeholder="Email") }}
+
+      <br>
+
+      {{ form.password1.label() }}
+      {{ form.password1(class="form-control", placeholder="Password") }}
+
+      <br>
+
+      {{ form.password2.label() }}
+      {{ form.password2(class="form-control", placeholder="Confirm Password") }}
+
+      <br>
+
+      {{ form.submit(class="btn btn-lg btn-block btn-primary") }}
+    </form>
+  </div>
+{% endblock %}
